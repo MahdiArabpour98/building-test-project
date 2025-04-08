@@ -1,5 +1,7 @@
+import NextTopLoader from "nextjs-toploader";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/provider/theme-provider";
 
 const vazirRegular = localFont({
   src: [
@@ -51,7 +53,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa-IR" dir="rtl">
-      <body className={`${vazirRegular.variable} antialiased`}>{children}</body>
+      <body className={`${vazirRegular.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextTopLoader color="var(--color-primary)" height={4} shadow="" showSpinner={false} />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
