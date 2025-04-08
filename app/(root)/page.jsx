@@ -1,9 +1,10 @@
-import SwitchTheme from "@/components/themes/switch-theme";
+import Header from "./components/header";
 
 const HomePage = () => {
   return (
-    <main className="">
-      <SwitchTheme />
+    <main>
+      <Header />
+      <div className="min-h-[calc(100vh-64px)]">سلام</div>
     </main>
   );
 };
