@@ -1,13 +1,8 @@
-import Buildings from "./components/buildings";
-import Header from "./components/header";
+import { routes } from "@/routes/routes";
+import { redirect } from "next/navigation";
 
-const HomePage = () => {
-  return (
-    <main>
-      <Header />
-      <Buildings />
-    </main>
-  );
+const HomePage = async () => {
+  redirect(routes.root.buildings.root);
 };
 
 export default HomePage;

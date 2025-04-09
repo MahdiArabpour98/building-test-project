@@ -2,6 +2,7 @@ import NextTopLoader from "nextjs-toploader";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/provider/theme-provider";
+import Header from "@/components/root/header";
 
 const vazirRegular = localFont({
   src: [
@@ -60,7 +61,13 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <NextTopLoader color="var(--color-primary)" height={4} shadow="" showSpinner={false} />
+          <NextTopLoader
+            color="var(--color-primary)"
+            height={4}
+            shadow=""
+            showSpinner={false}
+          />
+          <Header />
           {children}
         </ThemeProvider>
       </body>
