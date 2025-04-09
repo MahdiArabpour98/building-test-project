@@ -1,10 +1,11 @@
+import Buildings from "./components/buildings";
 import Header from "./components/header";
 
 const HomePage = () => {
   return (
     <main>
       <Header />
-      <div className="min-h-[calc(100vh-64px)]">سلام</div>
+      <Buildings />
     </main>
   );
 };
